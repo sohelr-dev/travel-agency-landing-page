@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNFTour - Your Travel Partner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        .btn-primary {
+            background: linear-gradient(45deg, #0056b3, #00aaff);
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #004494, #0088cc);
+        }
+
+
+        .package-card {
+            border-left: 5px solid #0056b3;
+            background: #ffffff;
+            transition: 0.3s;
+        }
+
+
+        .pkg-img-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#"><img src="image/fnfLogo.jpg" class="logoNav"
+                    alt=""></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-primary me-2 btn-sm px-3">Login</button>
+                    <button class="btn btn-primary btn-sm px-3">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mt-4">
+        <div class="row text-center">
+            <div class="col-12">
+                <ul class="nav nav-pills  justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill"
+                            data-bs-target="#holiday">Holiday</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#airticket">Air
+                            Ticket</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+                            data-bs-target="#visa">Visa</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+                            data-bs-target="#hotels">Hotels</button></li>
+                    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+                            data-bs-target="#activities">Activities</button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5">
+        <div class="tab-content" id="pills-tabContent">
+
+            <div class="tab-pane fade show active" id="holiday">
+                <h2 class="text-center fw-bold mb-5 mt-3" style="color: #002d5b;">Explore Our Exclusive Packages</h2>
+
+                <div class="accordion" id="holidayAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#maldiveSection">
+                                🏝️ Maldives - The Island Paradise
+                            </button>
+                        </h2>
+                        <div id="maldiveSection" class="accordion-collapse collapse" data-bs-parent="#holidayAccordion">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <button class="btn btn-outline-primary btn-pkg-select" data-bs-toggle="collapse"
+                                        data-bs-target="#mdv_short">3D/4N Budget</button>
+                                    <button class="btn btn-outline-primary btn-pkg-select" data-bs-toggle="collapse"
+                                        data-bs-target="#mdv_long">6 Night/7 Day Honeymoon</button>
+                                </div>
+
+                                <div class="collapse" id="mdv_short" data-bs-parent="#maldiveSection">
+                                    <div class="package-card mb-3">
+                                        <h4 class="pkg-title">Maldives Budget Getaway</h4>
+                                        <p class="text-muted">Perfect for a quick escape to the blue waters.</p>
+                                        <p class="price-tag">৳ 45,000</p>
+                                        <button class="btn btn-primary btn-sm">View Details</button>
+                                    </div>
+                                </div>
+
+
+                                <div class="collapse show" id="mdv_long" data-bs-parent="#maldiveSection">
+
+                                    <div class="package-card border-0 shadow-sm overflow-hidden mb-4"
+                                        style="border-left: 5px solid #0056b3 !important;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4 position-relative">
+                                                <div
+                                                    style="background: url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=500&q=80') center/cover; height: 100%; min-height: 200px;">
+                                                    <span
+                                                        class="badge bg-danger m-3 position-absolute top-0 start-0">Best
+                                                        Seller</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8">
+                                                <div class="card-body p-4">
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-start flex-wrap">
+                                                        <div>
+                                                            <h4 class="pkg-title mb-1" style="color: #002d5b;">Grand
+                                                                Maldives Honeymoon Special</h4>
+                                                            <p class="text-muted small mb-3">6 Nights / 7 Days - Premium
+                                                                All-Inclusive</p>
+                                                        </div>
+                                                        <div class="text-md-end">
+                                                            <span class="text-success fw-bold d-block h4 mb-0">৳
+                                                                1,45,000</span>
+                                                            <small class="text-muted">per person</small>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row my-3">
+                                                        <div class="col-sm-6 small mb-2">💎 5-Star Overwater Villa</div>
+                                                        <div class="col-sm-6 small mb-2">✈️ Round-trip Air Ticket</div>
+                                                        <div class="col-sm-6 small mb-2">🍽️ Underwater Dining</div>
+                                                        <div class="col-sm-6 small mb-2">🛥️ Airport Transfers</div>
+                                                    </div>
+
+                                                    <div class="d-flex gap-2">
+                                                        <button class="btn btn-primary px-4 fw-bold">Confirm
+                                                            Booking</button>
+                                                        <button class="btn btn-outline-primary px-4">View
+                                                            Itinerary</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="package-card">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <h4 class="pkg-title">Grand Maldives Honeymoon Special</h4>
+                                                <p class="text-muted">Luxury Water Villa stay with private pool.</p>
+                                                <ul class="row list-unstyled">
+                                                    <div class="col-6">
+                                                        <li>✅ Round-trip Air Ticket</li>
+                                                        <li>✅ 5-Star Resort Stay</li>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <li>✅ Underwater Dining</li>
+                                                        <li>✅ Sunset Cruise</li>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 text-center">
+                                                <p class="price-tag mb-1">৳ 1,45,000</p>
+                                                <button class="btn btn-primary w-100 py-2">Confirm Booking</button>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#europeSection">
+                                🇪🇺 Europe - Multicity Tour (Paris, Swiss, Rome)
+                            </button>
+                        </h2>
+                        <div id="europeSection" class="accordion-collapse collapse" data-bs-parent="#holidayAccordion">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <button class="btn btn-outline-primary btn-pkg-select" data-bs-toggle="collapse"
+                                        data-bs-target="#euro_10d">10 Night/11 Day Grand Europe</button>
+                                </div>
+                                <div class="collapse" id="euro_10d" data-bs-parent="#europeSection">
+                                    <div class="package-card" style="border-left-color: #ffc107;">
+                                        <h4 class="pkg-title">The Ultimate European Journey</h4>
+                                        <p>Experience the best of France, Switzerland, and Italy. Full guided tour with
+                                            Indian/Continental food.</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p class="small"><b>Inclusions:</b> Visa Support, 4-Star Hotels,
+                                                    Euro-rail Pass,
+                                                    Airport Transfers.</p>
+                                            </div>
+                                            <div class="col-md-6 text-md-end">
+                                                <p class="price-tag">৳ 3,20,000</p>
+                                                <button class="btn btn-warning fw-bold px-5">Request Quote</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#baliSection">
+                                🌋 Bali - Nature & Adventure
+                            </button>
+                        </h2>
+                        <div id="baliSection" class="accordion-collapse collapse" data-bs-parent="#holidayAccordion">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <button class="btn btn-outline-primary btn-pkg-select" data-bs-toggle="collapse"
+                                        data-bs-target="#bali_6n">6 Night/7 Day Complete Bali</button>
+                                </div>
+                                <div class="collapse" id="bali_6n" data-bs-parent="#baliSection">
+                                    <div class="package-card">
+                                        <h4 class="pkg-title">Bali Tropical Bliss Package</h4>
+                                        <p>Ubud (3 Nights) + Seminyak (3 Nights). Experience Bali Swing, Volcano tour,
+                                            and Nusa
+                                            Penida island.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="badge bg-info text-dark">Top Rated ★ 4.9</span>
+                                            <p class="price-tag mb-0">৳ 68,000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="airticket">
+                <h3 class="mb-4 section-title">Air Ticket Booking</h3>
+                <div class="accordion" id="airTicketAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#dhakaBangkok">
+                                Dhaka to Bangkok
+                            </button>
+                        </h2>
+                        <div id="dhakaBangkok" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>One Way / Round Trip available. Airlines: Thai Airways, US-Bangla.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="visa">
+                <h3 class="mb-4 section-title">Visa Processing Services</h3>
+                <div class="accordion" id="visaAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#indiaVisa">
+                                India Tourist Visa
+                            </button>
+                        </h2>
+                        <div id="indiaVisa" class="accordion-collapse collapse" data-bs-parent="#visaAccordion">
+                            <div class="accordion-body">
+                                <strong>Processing Time: 7-10 Working Days</strong>
+                                <p class="mt-2 text-muted small">Requirements: Passport, Bank Statement, Utility Bill
+                                    copy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="hotels">
+                <h3 class="mb-4 section-title">Luxury & Budget Hotels</h3>
+                <div class="accordion" id="hotelAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#coxsHotel">
+                                Cox's Bazar Sea View
+                            </button>
+                        </h2>
+                        <div id="coxsHotel" class="accordion-collapse collapse" data-bs-parent="#hotelAccordion">
+                            <div class="accordion-body">
+                                <strong>5 Star Experience</strong>
+                                <p class="mt-2 text-muted small">Includes: Ocean view suite, Swimming pool access,
+                                    Complimentary breakfast.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="activities">
+                <h3 class="mb-4 section-title">Exciting Activities</h3>
+                <div class="accordion" id="activityAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#paragliding">
+                                Paragliding & Scuba Diving
+                            </button>
+                        </h2>
+                        <div id="paragliding" class="accordion-collapse collapse" data-bs-parent="#activityAccordion">
+                            <div class="accordion-body">
+                                <strong>Adventure Awaits!</strong>
+                                <p class="mt-2 text-muted small">Location: Saint Martin & Sylhet. Professional trainers
+                                    provided.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">FNFTour</h5>
+                    <p class="small text-light" style="line-height: 1.8; opacity: 0.8;">
+                        Your ultimate travel companion for exploring the world's most breathtaking destinations.
+                        We specialize in curated holiday packages, seamless visa processing, and luxury stays
+                        to ensure your journey is nothing short of extraordinary.
+                    </p>
+                    <div class="social-icons mt-3">
+                        <a href="#">f</a> <a href="#">in</a>
+                        <a href="#">ig</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Holiday Packages</a></li>
+                        <li><a href="#" class="footer-link">Visa Services</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Help & Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Refund Policy</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <p class="small mb-2 text-white">📍 Dhaka, Bangladesh</p>
+                    <p class="small mb-2 text-white">📞 +880 1234 567 890</p>
+                    <p class="small text-white">✉️ support@fnftour.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-section">
+            <div class="container text-center">
+                <p class="small mb-0 opacity-75">&copy; 2026 FNFTour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
