@@ -163,3 +163,38 @@ footer {
     min-height: 250px;
     height: 100%;
 }
+
+/* for search box*/
+.search-box {
+    border: 1px solid #ddd;
+}
+
+.search-box input:focus {
+    box-shadow: none;
+}
+
+
+.package-card {
+    border-radius: 15px !important;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.package-card:hover {
+    transform: scale(1.02);
+}
+
+.price-tag-modern {
+    background: #f1f8e9;
+    color: #2e7d32;
+    padding: 8px 15px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+    .mt-n5 {
+        margin-top: 20px !important;
+    }
+}
