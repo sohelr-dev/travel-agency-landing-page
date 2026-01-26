@@ -7,46 +7,52 @@
     <title>FNFTour - Your Travel Partner</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/custom.css">
     <style>
+        .btn-primary {
+            background: linear-gradient(45deg, #0056b3, #00aaff);
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+            transition: 0.3s;
+        }
 
-.btn-primary {
-    background: linear-gradient(45deg, #0056b3, #00aaff);
-    border: none;
-    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    transform: scale(1.05);
-    background: linear-gradient(45deg, #004494, #0088cc);
-}
-
-
-.package-card {
-    border-left: 5px solid #0056b3;
-    background: #ffffff;
-    transition: 0.3s;
-}
+        .btn-primary:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #004494, #0088cc);
+        }
 
 
-.pkg-img-placeholder {
-    width: 100%;
-    height: 150px;
-    background-color: #eee;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-}
+        .package-card {
+            border-left: 5px solid #0056b3;
+            background: #ffffff;
+            transition: 0.3s;
+        }
+
+
+        .pkg-img-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        footer {
+            border-radius: 50px 50px 0 0;
+            margin-top: 80px;
+        }
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top" data-aos="fade-down" data-aos-duration="1000">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="#"><img src="assets/image/fnfLogo.jpg" class="logoNav"
                     alt=""></a>
@@ -67,9 +73,9 @@
             </div>
         </div>
     </nav>
-    
 
-    <section class="container mt-4">
+
+    <section class="container mt-4" data-aos="zoom-in" data-aos-delay="200">
         <div class="row text-center">
             <div class="col-12">
                 <ul class="nav nav-pills  justify-content-center" id="pills-tab" role="tablist">
@@ -92,18 +98,18 @@
         <div class="tab-content" id="pills-tabContent">
 
             <div class="tab-pane fade show active" id="holiday">
-                <h2 class="text-center fw-bold mb-5 mt-3" style="color: #002d5b;">Explore Our Exclusive Packages</h2>
-            
+                <h2 class="text-center fw-bold mb-5 mt-3" style="color: #002d5b;" data-aos="fade-up">Explore Our Exclusive Packages</h2>
+
                 <div class="accordion" id="holidayAccordion">
-            
-                    <div class="accordion-item shadow-sm">
+
+                    <div class="accordion-item shadow-sm" data-aos="fade-right" data-aos-delay="100">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#maldiveSection">
                                 🏝️ Maldives - The Island Paradise
                             </button>
                         </h2>
-                        <div id="maldiveSection" class="accordion-collapse collapse" data-bs-parent="#holidayAccordion">
+                        <div id="maldiveSection" class="accordion-collapse collapse" data-bs-parent="#holidayAccordion" >
                             <div class="accordion-body">
                                 <div class="d-flex flex-wrap gap-2 mb-4">
                                     <button class="btn btn-outline-primary btn-pkg-select" data-bs-toggle="collapse"
@@ -111,7 +117,7 @@
                                     <button class="btn btn-outline-primary btn-pkg-select" data-bs-toggle="collapse"
                                         data-bs-target="#mdv_short">3D/4N Budget Escape</button>
                                 </div>
-                        
+
                                 <div class="collapse show" id="mdv_long" data-bs-parent="#maldiveSection">
                                     <div class="package-card border-0 shadow-sm overflow-hidden mb-4"
                                         style="border-left: 5px solid #3f65ee !important;">
@@ -126,30 +132,37 @@
                                                 <div class="card-body p-4">
                                                     <div class="d-flex justify-content-between align-items-start">
                                                         <div>
-                                                            <h4 class="pkg-title mb-1 fw-bold">Grand Maldives Honeymoon Special</h4>
-                                                            <p class="text-muted small">6 Nights / 7 Days - Full Luxury Experience</p>
+                                                            <h4 class="pkg-title mb-1 fw-bold">Grand Maldives Honeymoon
+                                                                Special</h4>
+                                                            <p class="text-muted small">6 Nights / 7 Days - Full Luxury
+                                                                Experience</p>
                                                         </div>
                                                         <div class="text-end">
-                                                            <span class="text-success fw-bold h4 d-block mb-0">৳ 1,45,000</span>
+                                                            <span class="text-success fw-bold h4 d-block mb-0">৳
+                                                                1,45,000</span>
                                                             <small class="text-muted">per person</small>
                                                         </div>
                                                     </div>
                                                     <div class="row my-3">
-                                                        <div class="col-sm-6 mb-2">💎 3N Water Villa + 3N Beach Villa</div>
+                                                        <div class="col-sm-6 mb-2">💎 3N Water Villa + 3N Beach Villa
+                                                        </div>
                                                         <div class="col-sm-6 mb-2">✈️ Dhaka-Male Return Air Ticket</div>
                                                         <div class="col-sm-6 mb-2">🍽️ Full Board (All Meals)</div>
                                                         <div class="col-sm-6 mb-2">🛥️ Luxury Speedboat Transfer</div>
                                                     </div>
                                                     <div class="d-flex gap-2">
-                                                        <button class="btn btn-primary px-4 fw-bold">Book Now</button>
-                                                        <button class="btn btn-outline-primary px-4">Itinerary</button>
+                                                        <button class="btn btn-primary px-4 fw-bold"
+                                                            data-bs-toggle="modal" data-bs-target="#bookingModal">Book
+                                                            Now</button>
+                                                        <a href="maldive-details.html" target="_blank"
+                                                            class="btn btn-outline-primary px-4">Itinerary</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <div class="collapse" id="mdv_short" data-bs-parent="#maldiveSection">
                                     <div class="package-card border-0 shadow-sm overflow-hidden mb-4"
                                         style="border-right: 5px solid #3f65ee !important;">
@@ -159,11 +172,14 @@
                                                     <div
                                                         class="d-flex justify-content-between align-items-start flex-row-reverse text-md-end text-start">
                                                         <div>
-                                                            <h4 class="pkg-title mb-1 fw-bold">Maldives Budget Escape</h4>
-                                                            <p class="text-muted small">3 Nights / 4 Days - Tropical Bliss</p>
+                                                            <h4 class="pkg-title mb-1 fw-bold">Maldives Budget Escape
+                                                            </h4>
+                                                            <p class="text-muted small">3 Nights / 4 Days - Tropical
+                                                                Bliss</p>
                                                         </div>
                                                         <div class="text-start text-md-start me-md-auto">
-                                                            <span class="text-success fw-bold h4 d-block mb-0">৳ 65,000</span>
+                                                            <span class="text-success fw-bold h4 d-block mb-0">৳
+                                                                65,000</span>
                                                             <small class="text-muted">per person</small>
                                                         </div>
                                                     </div>
@@ -173,8 +189,10 @@
                                                         <div class="col-sm-6 mb-2">🍽️ Daily Breakfast & Dinner</div>
                                                         <div class="col-sm-6 mb-2">🏊 Sandbank & Snorkeling Trip</div>
                                                     </div>
-                                                    <div class="d-flex gap-2 justify-content-md-end justify-content-start">
-                                                        <button class="btn btn-outline-primary px-4">View Details</button>
+                                                    <div
+                                                        class="d-flex gap-2 justify-content-md-end justify-content-start">
+                                                        <button class="btn btn-outline-primary px-4">View
+                                                            Details</button>
                                                         <button class="btn btn-primary px-4 fw-bold">Book Now</button>
                                                     </div>
                                                 </div>
@@ -182,32 +200,36 @@
                                             <div class="col-md-4 order-1 order-md-2">
                                                 <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
                                                     <div class="carousel-inner">
-                                            
+
                                                         <!-- Slide 1 -->
                                                         <div class="carousel-item active">
-                                                            <div class="bg-image" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                                            <div class="bg-image" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModal"
                                                                 onclick="openImage('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80')"
                                                                 style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80');">
                                                                 <span class="badge bg-primary m-3">Value Pack</span>
                                                             </div>
                                                         </div>
-                                            
+
                                                         <!-- Slide 2 -->
                                                         <div class="carousel-item">
-                                                            <div class="bg-image" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                                            <div class="bg-image" data-bs-toggle="modal"
+                                                                data-bs-target="#imageModal"
                                                                 onclick="openImage('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80')"
                                                                 style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80');">
                                                             </div>
                                                         </div>
-                                            
+
                                                     </div>
-                                            
+
                                                     <!-- Controls -->
-                                                    <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                                                    <button class="carousel-control-prev" type="button"
+                                                        data-bs-target="#imageCarousel" data-bs-slide="prev">
                                                         <span class="carousel-control-prev-icon"></span>
                                                     </button>
-                                            
-                                                    <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+
+                                                    <button class="carousel-control-next" type="button"
+                                                        data-bs-target="#imageCarousel" data-bs-slide="next">
                                                         <span class="carousel-control-next-icon"></span>
                                                     </button>
                                                 </div>
@@ -217,7 +239,7 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+
                             </div>
                         </div>
                     </div>
@@ -233,8 +255,8 @@
                         </div>
                     </div>
 
-            
-                    <div class="accordion-item shadow-sm">
+
+                    <div class="accordion-item shadow-sm" data-aos="fade-left" data-aos-delay="100">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#thaiSection">
@@ -258,7 +280,8 @@
                                             </div>
                                             <div class="col-md-8 p-4">
                                                 <h4 class="pkg-title">Thailand Grand Explorer</h4>
-                                                <p>3 Nights in Phuket (Beach Resort) + 3 Nights in Bangkok (City Center).</p>
+                                                <p>3 Nights in Phuket (Beach Resort) + 3 Nights in Bangkok (City
+                                                    Center).</p>
                                                 <div class="row small mb-3">
                                                     <div class="col-6">✅ Phi Phi Island Tour by Big Boat</div>
                                                     <div class="col-6">✅ Safari World & Marine Park</div>
@@ -276,8 +299,8 @@
                             </div>
                         </div>
                     </div>
-            
-                    <div class="accordion-item shadow-sm">
+
+                    <div class="accordion-item shadow-sm" data-aos="fade-right" data-aos-delay="100">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#bhutanSection">
@@ -303,7 +326,7 @@
                             </div>
                         </div>
                     </div>
-            
+
                 </div>
             </div>
 
@@ -391,7 +414,7 @@
         </div>
     </section>
 
-    <footer class="pt-5">
+    <footer class="pt-5" data-aos="fade-up" data-aos-delay="100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -406,17 +429,17 @@
                         <a href="#">ig</a>
                     </div>
                 </div>
-    
+
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5 class="footer-title">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="home.html" class="footer-link">New Interface</a></li>
                         <li><a href="#" class="footer-link">Holiday Packages</a></li>
                         <li><a href="#" class="footer-link">Visa Services</a></li>
                         <li><a href="#" class="footer-link">Contact Us</a></li>
                     </ul>
                 </div>
-    
+
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="footer-title">Help & Support</h5>
                     <ul class="list-unstyled">
@@ -426,7 +449,7 @@
                         <li><a href="#" class="footer-link">FAQ</a></li>
                     </ul>
                 </div>
-    
+
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="footer-title">Contact Us</h5>
                     <p class="small mb-2 text-white">📍 Dhaka, Bangladesh</p>
@@ -435,17 +458,63 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="copyright-section">
             <div class="container text-center">
-                <p class="small mb-0 opacity-75">&copy; 2026 FNFTour. All rights reserved with <a href="http://sohelit.com" target="_blank" rel="noopener noreferrer">Sohel IT</a></p>
+                <p class="small mb-0 opacity-75">&copy; 2026 FNFTour. All rights reserved with <a
+                        href="http://sohelit.com" target="_blank" rel="noopener noreferrer">Sohel IT</a></p>
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="bookingModalLabel">Book Your Dream Trip</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="+880 1XXX XXXXXX" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Preferred Date</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary py-2 fw-bold">Confirm Inquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
+        AOS.init({
+                duration: 800, 
+                easing: 'ease-in-out', 
+                once: false, 
+                mirror: true
+            });
         function openImage(src) {
             document.getElementById("modalImage").src = src;
         }
+
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('ধন্যবাদ! আপনার বুকিং রিকোয়েস্ট জমা হয়েছে। আমাদের প্রতিনিধি শীঘ্রই যোগাযোগ করবেন।');
+            bootstrap.Modal.getInstance(document.getElementById('bookingModal')).hide();
+        });
     </script>
 
 
