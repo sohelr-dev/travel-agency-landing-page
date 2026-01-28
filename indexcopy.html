@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNFTour - Your Travel Partner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        .btn-primary {
+            background: linear-gradient(45deg, #0056b3, #00aaff);
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #004494, #0088cc);
+        }
+
+
+        .package-card {
+            border-left: 5px solid #0056b3;
+            background: #ffffff;
+            transition: 0.3s;
+        }
+
+
+        .pkg-img-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        footer {
+            border-radius: 50px 50px 0 0;
+            margin-top: 80px;
+        }
+        .cursor-pointer {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cursor-pointer:hover {
+    transform: translateY(-5px);
+    border-color: #0056b3 !important;
+    background-color: #f0f7ff !important;
+}
+
+/* Collapse animation smooth korar jonno */
+.collapse {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close {
+    background-size: 10px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 576px) {
+    .fs-2 {
+        font-size: 1.5rem !important;
+    }
+    h6 {
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html"><img src="assets/image/fnfLogo.jpg" class="logoNav"
+                    alt=""></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-primary me-2 btn-sm px-3">Login</button>
+                    <button class="btn btn-primary btn-sm px-3">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="container mt-5">
+        <div class="row g-3">
+            <div class="col-6 col-md-4" data-aos="fade-up">
+                <div class="p-3 bg-white shadow-sm rounded-4 text-center border cursor-pointer" data-bs-toggle="collapse"
+                    data-bs-target="#holidayContent" role="button">
+                    <div class="fs-2">🏝️</div>
+                    <h6 class="fw-bold mb-0">Holiday</h6>
+                </div>
+            </div>
+    
+            <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-3 bg-white shadow-sm rounded-4 text-center border cursor-pointer" data-bs-toggle="collapse"
+                    data-bs-target="#visaContent" role="button">
+                    <div class="fs-2">🛂</div>
+                    <h6 class="fw-bold mb-0">Visa</h6>
+                </div>
+            </div>
+    
+            <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-3 bg-white shadow-sm rounded-4 text-center border cursor-pointer" data-bs-toggle="collapse"
+                    data-bs-target="#hotelContent" role="button">
+                    <div class="fs-2">🏨</div>
+                    <h6 class="fw-bold mb-0">Hotels</h6>
+                </div>
+            </div>
+    
+            <div class="col-12">
+                <div class="collapse mt-3" id="holidayContent" data-bs-parent=".row">
+                    <div class="card card-body border-0 shadow-sm rounded-4 bg-light">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="fw-bold">Holiday Packages</h5>
+                            <button class="btn-close" data-bs-toggle="collapse" data-bs-target="#holidayContent"></button>
+                        </div>
+                        <p>Ekhane apnar Holiday-r shob package thakbe...</p>
+                    </div>
+                </div>
+    
+                <div class="collapse mt-3" id="visaContent" data-bs-parent=".row">
+                    <div class="card card-body border-0 shadow-sm rounded-4 bg-light">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="fw-bold">Visa Assistance</h5>
+                            <button class="btn-close" data-bs-toggle="collapse" data-bs-target="#visaContent"></button>
+                        </div>
+                        <p>Visa processing details ekhane thakbe...</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <footer class="pt-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">FNFTour</h5>
+                    <p class="small text-light" style="line-height: 1.8; opacity: 0.8;">
+                        Your ultimate travel companion for exploring the world's most breathtaking destinations.
+                        We specialize in curated holiday packages, seamless visa processing, and luxury stays
+                        to ensure your journey is nothing short of extraordinary.
+                    </p>
+                    <div class="social-icons mt-3">
+                        <a href="#">f</a> <a href="#">in</a>
+                        <a href="#">ig</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html" class="footer-link">New Interface</a></li>
+                        <li><a href="indexAirCart.html" class="footer-link">New Interface Cart System</a></li>
+                        <li><a href="#" class="footer-link">Visa Services</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Help & Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="client.html" class="footer-link">Clients</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Refund Policy</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <p class="small mb-2 text-white">📍 Dhaka, Bangladesh</p>
+                    <p class="small mb-2 text-white">📞 +880 1234 567 890</p>
+                    <p class="small text-white">✉️ support@fnftour.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-section">
+            <div class="container text-center">
+                <p class="small mb-0 opacity-75">&copy; 2026 FNFTour. All rights reserved with <a
+                        href="http://sohelit.com" target="_blank" rel="noopener noreferrer">Sohel IT</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="bookingModalLabel">Book Your Dream Trip</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="+880 1XXX XXXXXX" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Preferred Date</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary py-2 fw-bold">Confirm Inquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+                duration: 800, 
+                easing: 'ease-in-out', 
+                once: false, 
+                mirror: true
+            });
+        function openImage(src) {
+            document.getElementById("modalImage").src = src;
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('ধন্যবাদ! আপনার বুকিং রিকোয়েস্ট জমা হয়েছে। আমাদের প্রতিনিধি শীঘ্রই যোগাযোগ করবেন।');
+            bootstrap.Modal.getInstance(document.getElementById('bookingModal')).hide();
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

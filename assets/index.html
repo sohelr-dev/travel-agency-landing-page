@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNFTour - Premium Travel Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+        }
+
+        /* --- Navbar Styling --- */
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #0056b3 !important;
+        }
+
+        /* --- Mobile Grid Layout --- */
+        @media (max-width: 768px) {
+            .main-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+                padding: 15px;
+            }
+
+            .nav-box {
+                height: 95px;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 13px;
+                font-weight: 600;
+                color: white;
+                cursor: pointer;
+                transition: 0.3s;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .bg-holiday {
+                background: linear-gradient(45deg, #0056b3, #00d2ff);
+                grid-column: span 2;
+                height: 80px;
+                font-size: 16px;
+            }
+
+            .bg-ticket {
+                background: linear-gradient(45deg, #6a11cb, #2575fc);
+            }
+
+            .bg-visa {
+                background: linear-gradient(45deg, #ff8c00, #ffc107);
+            }
+
+            .bg-hotel {
+                background: linear-gradient(45deg, #11998e, #38ef7d);
+            }
+
+            .bg-act {
+                background: linear-gradient(45deg, #eb3349, #f45c43);
+            }
+
+            .content-section {
+                display: none;
+                background: white;
+                border-radius: 20px 20px 0 0;
+                padding: 20px;
+                min-height: 80vh;
+                animation: slideUp 0.4s ease;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .side-arrow-btn {
+                position: fixed;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 50px;
+                background: #002d5b;
+                color: white;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                border-radius: 20px 0 0 20px;
+                z-index: 9999;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .d-none-mob {
+                display: none !important;
+            }
+
+            .d-block-mob {
+                display: block !important;
+            }
+
+            .d-flex-mob {
+                display: flex !important;
+            }
+        }
+
+        /* --- Footer Styling --- */
+        footer {
+            background: #001a35;
+            color: #fff;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-link {
+            color: #adb5bd;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #fff;
+        }
+
+        /* --- Accordion Custom --- */
+        .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 8px !important;
+            overflow: hidden;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: #eef5ff;
+            color: #0056b3;
+            box-shadow: none;
+        }
+
+        .price-tag {
+            color: #198754;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">FNFTour</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-primary btn-sm ms-lg-3 text-white px-3" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4 mb-5">
+        <div class="main-grid" id="mainGrid">
+            <div class="nav-box bg-holiday" onclick="openService('holiday')">🏝️ Holiday Packages</div>
+            <div class="nav-box bg-ticket" onclick="openService('ticket')">✈️ Air Ticket</div>
+            <div class="nav-box bg-visa" onclick="openService('visa')">🛂 Visa Services</div>
+            <div class="nav-box bg-hotel" onclick="openService('hotel')">🏨 Hotel Booking</div>
+            <div class="nav-box bg-act" onclick="openService('act')">🏂 Activities</div>
+        </div>
+
+        <div class="side-arrow-btn" id="sideBackBtn" onclick="closeService()">
+            <span>⬅</span>
+        </div>
+
+        <div id="holidayContent" class="content-section">
+            <h3 class="fw-bold mb-4">International Holiday Packages</h3>
+            <div class="accordion" id="accHoliday">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse"
+                            data-bs-target="#h1">🏝️ Maldives Paradise</button></h2>
+                    <div id="h1" class="accordion-collapse collapse show" data-bs-parent="#accHoliday">
+                        <div class="accordion-body">Water Villa Stay, Full Board Meals. <div class="price-tag">৳
+                                1,45,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#h2">🇹🇭 Thailand Explorer</button></h2>
+                    <div id="h2" class="accordion-collapse collapse" data-bs-parent="#accHoliday">
+                        <div class="accordion-body">Bangkok & Phuket Combo - 5 Nights. <div class="price-tag">৳ 72,500
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#h3">🇧🇹 Bhutan Serenity</button></h2>
+                    <div id="h3" class="accordion-collapse collapse" data-bs-parent="#accHoliday">
+                        <div class="accordion-body">Land of Happiness - Thimphu & Paro. <div class="price-tag">৳ 48,000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#h4">🇮🇩 Bali Tropical Bliss</button></h2>
+                    <div id="h4" class="accordion-collapse collapse" data-bs-parent="#accHoliday">
+                        <div class="accordion-body">Ubud & Kuta Beach Luxury Stay. <div class="price-tag">৳ 88,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#h5">🇹🇷 Turkey Wonders</button></h2>
+                    <div id="h5" class="accordion-collapse collapse" data-bs-parent="#accHoliday">
+                        <div class="accordion-body">Istanbul & Cappadocia Hot Air Balloon. <div class="price-tag">৳
+                                1,95,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ticketContent" class="content-section">
+            <h3 class="fw-bold mb-4">Domestic & International Flights</h3>
+            <div class="card p-3 mb-3 border-0 shadow-sm">
+                <h6>Dhaka to Singapore</h6>
+                <p class="small text-muted mb-0">Starting from ৳ 38,000</p>
+            </div>
+            <div class="card p-3 mb-3 border-0 shadow-sm">
+                <h6>Dhaka to New York</h6>
+                <p class="small text-muted mb-0">Starting from ৳ 1,25,000</p>
+            </div>
+        </div>
+
+        <div id="visaContent" class="content-section">
+            <h3 class="fw-bold">Visa Support</h3>
+            <p>Fast processing for USA, UK, Canada & Europe.</p>
+        </div>
+        <div id="hotelContent" class="content-section">
+            <h3 class="fw-bold">Hotels</h3>
+            <p>Booking available for over 500,000 hotels worldwide.</p>
+        </div>
+        <div id="actContent" class="content-section">
+            <h3 class="fw-bold">Activities</h3>
+            <p>Skydiving, Desert Safari, and Dinner Cruises.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">FNFTour</h5>
+                    <p class="small text-muted">Your reliable partner for global travel, visa, and hotel bookings.</p>
+                </div>
+                <div class="col-6 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Support</h5>
+                    <p class="small text-muted mb-1">Email: info@fnftour.com</p>
+                    <p class="small text-muted">Call: +880 1234 567890</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p class="text-center small text-muted mb-0">&copy; 2026 FNFTour. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openService(type) {
+            document.getElementById('mainGrid').classList.add('d-none-mob');
+            document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('d-block-mob'));
+            document.getElementById(type + 'Content').classList.add('d-block-mob');
+            document.getElementById('sideBackBtn').classList.add('d-flex-mob');
+            window.scrollTo(0, 0);
+        }
+        function closeService() {
+            document.getElementById('mainGrid').classList.remove('d-none-mob');
+            document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('d-block-mob'));
+            document.getElementById('sideBackBtn').classList.remove('d-flex-mob');
+        }
+    </script>
+</body>
+
+</html>
